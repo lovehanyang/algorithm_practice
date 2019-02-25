@@ -10,6 +10,21 @@ public class QuickSort {
         System.out.println(Arrays.toString(arr));
     }
 
+    /**
+     * 快速从一组无序数中找到第k大的数（或前k个大的数）
+     */
+    public void findK(int k,int[] arr,int low,int high){
+        int temp=partition(arr,low,high);
+        if(temp==k-1){
+            System.out.print("第"+k+"大的数是："+arr[temp]);
+        }else if(temp>k-1){
+            findK(k,arr,low,temp-1);
+        }else{
+            findK(k,arr,temp+1,high);
+        }
+    }
+
+
     private static void quickSort(int[] arr, int startIndex, int endIndex) {
 
         if (startIndex >= endIndex) {
