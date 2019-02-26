@@ -12,7 +12,6 @@ public class MergeNode {
         head2.next = new Node(4);
         head2.next.next = new Node(6);
         head2.next.next.next = new Node(8);
-
         Node head = mergeCycle(head1, head2);
 
         while (head != null) {
