@@ -12,7 +12,7 @@ public class SingletonTwo {
     }
 
     private static class Holder {
-        static SingletonTwo instance = new SingletonTwo();
+        private static SingletonTwo instance = new SingletonTwo();
     }
 
 }

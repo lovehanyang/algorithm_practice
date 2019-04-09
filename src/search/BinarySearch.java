@@ -49,15 +49,12 @@ public class BinarySearch {
             if (high - low == 1) {
                 return nums[high];
             }
-
             mid = (low + high) / 2;
-
             if (nums[mid] < nums[low]) {
                 high = mid;
             } else {
                 low = mid;
             }
-
         }
         return nums[0];
     }
